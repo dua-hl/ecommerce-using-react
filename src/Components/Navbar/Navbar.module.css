@@ -1,0 +1,14 @@
+.navbar{
+    width: 90% !important;
+    padding-top: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.navitems{
+    padding: 0 .8rem;
+}
+
+.navIcons{
+    font-size:18px ;
+}
