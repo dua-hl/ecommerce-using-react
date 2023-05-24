@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className={`container d-flex align-items-center fixed-top ${style.navbar}`}>
 
     <div className='navright col-3'>
-      <Link to="home">
+      <Link to="">
       <img src='images/logo.avif' />
       </Link>
     </div>
@@ -26,36 +26,36 @@ export default function Navbar() {
           <ul className="navbar-nav mb-2 mb-lg-0">
 
             <li className={`nav-item ${style.navitems}`}>
-              <Link className="nav-link text-uppercase text-white" aria-current="page" to="home">Home</Link>
+              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="" >Home</Link>
             </li>
 
             <li className={`nav-item ${style.navitems}`}>
-              <Link className="nav-link text-uppercase text-white" aria-current="page" to="shop">Shop</Link>
+              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="shop">Shop</Link>
             </li>
 
             <li className={`nav-item ${style.navitems}`}>
-              <Link className="nav-link text-uppercase text-white" aria-current="page" to="product">Product</Link>
+              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="product">Product</Link>
             </li>
 
             <li className={`nav-item ${style.navitems}`}>
-              <Link className="nav-link text-uppercase text-white" aria-current="page" to="pages">Pages</Link>
+              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="pages">Pages</Link>
             </li>
 
             <li className={`nav-item ${style.navitems}`}>
-              <Link className="nav-link text-uppercase text-white" aria-current="page" to="blog">Blog</Link>
+              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="blog">Blog</Link>
             </li>    
 
             <li className={`nav-item ${style.navitems}`}>
-              <Link className="nav-link text-uppercase fw-bold text-white" aria-current="page" to="buynow">Buy Now!</Link>
+              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="buynow">Buy Now!</Link>
             </li>               
 
           </ul>
 
           <div className="d-flex ms-auto " role="search">
             <ul className={`navbar-nav gap-4 ${style.navIcons}`}>
-              <li><i className="fa-solid fa-magnifying-glass text-white"></i></li>
-              <li><i className="fa-regular fa-circle-user text-white"></i></li>
-              <li><i className="fa-solid fa-bag-shopping text-white"></i></li>
+              <li><Link to=''><i className="fa-solid fa-magnifying-glass text-white"></i></Link></li>
+              <li><Link to=''><i className="fa-regular fa-circle-user text-white"></i></Link></li>
+              <li><Link to=''><i className="fa-solid fa-bag-shopping text-white position-relative"><span>0</span></i></Link></li>
             </ul>
 
           </div>

@@ -9,7 +9,7 @@ function App() {
 const router = createBrowserRouter([
 
   {path:'' , element: <Layout /> , children:[
-    {path:'home', element:<Home />},
+    {index:true , element: <Home />},
   ]}
 
 

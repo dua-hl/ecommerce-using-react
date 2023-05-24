@@ -1,0 +1,41 @@
+.footer{
+    background-color: #f9f9f9;
+    font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
+    font-size: 13px !important;
+}
+
+.footer ul h3{
+    font-family: Roboto Slab,serif;
+    font-weight: 700 !important;
+    font-size: 13px;
+}
+
+.navlinks{
+    padding: .2rem 0 !important;
+    width: fit-content;
+}
+.navlinks:hover{
+    text-decoration: underline;  
+    color: rgba(0, 0, 0, 0.57) !important; 
+    transition: .3s;   
+}
+
+.footer ul button{
+    width: 35%;
+    padding: 0.65rem 1rem;
+    border: none;
+    background-color:#339498 ;
+    color: white;
+    font-size: 11px;
+}
+
+.fwhite{
+    height:4rem;
+}
+
+.arrowup i{
+    background-color: #339498;
+    color: white;
+    font-size: .9rem;
+    padding: 11px 13px;
+}

@@ -2,8 +2,7 @@
     width: 90% !important;
     padding-top: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    
+    font-size: 13px;   
 }
 
 .navitems{
@@ -12,4 +11,17 @@
 
 .navIcons i{
     font-size:18px ;
+}
+.navIcons i span{
+    position: absolute;
+    bottom: 10px;
+    font-size: 9px !important;
+    background-color: black;
+    border-radius: 50%;
+    padding: 4px 5px;
+}
+
+.navlinks:hover{
+transition: .3s;
+opacity: .6; 
 }
