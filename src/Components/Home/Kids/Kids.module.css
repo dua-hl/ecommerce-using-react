@@ -1,0 +1,40 @@
+.kids{
+
+    height: 75vh;
+    background-image: url("../../../../public/images/kids.jpg");
+    background-size: cover;
+    background-attachment: fixed;    
+    }
+    
+    .contentKids{
+        color: white;
+        font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
+        width: 43%;
+        text-align:center;
+    }
+    
+    .contentKids h1{
+        font-size: 40px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 600;
+    }
+    
+    .contentKids h3{
+        font-size: 18px;
+        padding-top:.7rem ;
+        padding-bottom: 1.7rem;
+    }
+    
+    .contentKids button{
+        font-size: 14px;
+        color:white;
+        background-color: black;
+        border: none;
+        padding:.65rem 1.7rem;
+    }
+    
+    .contentKids button:hover{
+        background-color: white;
+        color: black;
+        transition: .5s;
+    }

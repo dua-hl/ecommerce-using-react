@@ -1,0 +1,42 @@
+.gifts{
+
+height: 100vh;
+background-image: url("../../../../public/images/gifts-background.webp");
+background-size: cover;
+background-position-y:50% ;
+position: relative;
+
+}
+
+.giftsContent{
+    color: white;
+    font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
+    width: 33%;
+    text-align:center;
+}
+
+.giftsContent h1{
+    font-size: 70px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+}
+
+.giftsContent h3{
+    font-size: 16px;
+    padding-top:.7rem ;
+    padding-bottom: 1.7rem;
+}
+
+.giftsContent button{
+    font-size: 14px;
+    color:white;
+    background-color: black;
+    border: none;
+    padding:.65rem 1.7rem;
+}
+
+.giftsContent button:hover{
+    background-color: white;
+    color: black;
+    transition: .5s;
+}

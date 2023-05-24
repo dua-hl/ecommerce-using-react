@@ -1,0 +1,40 @@
+.wallet{
+    height: 75vh;
+    background-image: url("../../../../public/images/wallets.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    
+    .contentWallet{
+        font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
+        width: 40%;
+        text-align:center;
+        color:white;
+        }
+    
+    .contentWallet h1{
+        font-size: 40px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 600;
+        line-height: 3.3rem;
+    }
+    
+    .contentWallet h3{
+        font-size: 18px;
+        padding-bottom: 1rem;
+        line-height: 2.5rem;
+    }
+    
+    .contentWallet button{
+        font-size: 14px;
+        color:white;
+        background-color: black;
+        border: none;
+        padding:.65rem 1.7rem;
+    }
+    
+    .contentWallet button:hover{
+        background-color: white;
+        color: black;
+        transition: .5s;
+    }

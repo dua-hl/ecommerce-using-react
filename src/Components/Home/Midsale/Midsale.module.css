@@ -1,0 +1,39 @@
+.sale{
+    height: 75vh;
+    background-image: url("../../../../public/images/midsale.webp");
+    background-size: cover;
+    }
+    
+    .contentSale{
+        font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
+        width: 40%;
+        text-align:center;
+        color:#000000
+        }
+    
+    .contentSale h1{
+        font-size: 40px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 600;
+        line-height: 3.3rem;
+    }
+    
+    .contentSale h3{
+        font-size: 18px;
+        padding-bottom: 1rem;
+        line-height: 2.5rem;
+    }
+    
+    .contentSale button{
+        font-size: 14px;
+        color:white;
+        background-color: black;
+        border: none;
+        padding:.65rem 1.7rem;
+    }
+    
+    .contentSale button:hover{
+        background-color: white;
+        color: black;
+        transition: .5s;
+    }
