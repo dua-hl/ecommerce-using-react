@@ -53,9 +53,9 @@ export default function Navbar() {
 
           <div className="d-flex ms-auto " role="search">
             <ul className={`navbar-nav gap-4 ${style.navIcons}`}>
-              <li><Link to=''><i className="fa-solid fa-magnifying-glass text-white"></i></Link></li>
-              <li><Link to=''><i className="fa-regular fa-circle-user text-white"></i></Link></li>
-              <li><Link to=''><i className="fa-solid fa-bag-shopping text-white position-relative"><span>0</span></i></Link></li>
+              <li><Link to=''><i className={`fa-solid fa-magnifying-glass text-white ${style.navlinks}`}></i></Link></li>
+              <li><Link to=''><i className={`fa-regular fa-circle-user text-white ${style.navlinks}`}></i></Link></li>
+              <li><Link to=''><i className={`fa-solid fa-bag-shopping text-white position-relative ${style.navlinks}`}><span>0</span></i></Link></li>
             </ul>
 
           </div>
