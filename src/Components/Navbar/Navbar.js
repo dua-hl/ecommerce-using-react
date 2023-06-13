@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import style from './Navbar.module.css';
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <div>
 
@@ -21,24 +21,120 @@ export default function Navbar() {
           <span className="navbar-toggler-icon" />
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="d-flex navbar-collapse" id="navbarSupportedContent">
           
-          <ul className="navbar-nav mb-2 mb-lg-0">
+          <ul className="col-8 d-flex justify-content-center gap-5 navbar-nav mb-2 mb-lg-0">
 
             <li className={`nav-item ${style.navitems}`}>
               <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="" >Home</Link>
             </li>
 
-            <li className={`nav-item ${style.navitems}`}>
-              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="shop">Shop</Link>
+            <li className={`position-relative nav-item ${style.navitems}`}>
+              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="shopping">Shop</Link>
+
+            {/* dropdown =>products categories inside since dropdownLinkCat class is for list with subcategories which have different styles*/}
+              <ul className={`bg-danger navbar-nav dropdown gap-5 pb-0 ${style.dropdownList}`}>
+              <li className='nav-item'>
+                <Link to='#' className={`fw-semibold text-uppercase nav-link text-black ${style.dropdownLinkCat}`}>Category Name</Link>
+
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 1</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 2</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 3</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 4</Link>
+
+              </li>
+
+              <li className='nav-item'>
+                <Link to='#' className={`fw-semibold text-uppercase nav-link text-black ${style.dropdownLinkCat}`}>Category Name</Link>
+
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 1</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 2</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 3</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 4</Link>
+
+              </li>
+
+              <li className='nav-item'>
+                <Link to='#' className={`fw-semibold text-uppercase nav-link text-black ${style.dropdownLinkCat}`}>Category Name</Link>
+
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 1</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 2</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 3</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 4</Link>
+
+              </li>
+
+              <li className='nav-item'>
+                <Link to='#' className={`fw-semibold text-uppercase nav-link text-black ${style.dropdownLinkCat}`}>Category Name</Link>
+
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 1</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 2</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 3</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 4</Link>
+
+              </li>
+
+              <li className='nav-item'>
+                <Link to='#' className={`fw-semibold text-uppercase nav-link text-black ${style.dropdownLinkCat}`}>Category Name</Link>
+
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 1</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 2</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 3</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 4</Link>
+
+              </li>
+
+              <li className='nav-item'>
+                <Link to='#' className={`fw-semibold text-uppercase nav-link text-black ${style.dropdownLinkCat}`}>Category Name</Link>
+
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 1</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 2</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 3</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 4</Link>
+
+              </li>
+
+              <li className='nav-item'>
+                <Link to='#' className={`fw-semibold text-uppercase nav-link text-black ${style.dropdownLinkCat}`}>Category Name</Link>
+
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 1</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 2</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 3</Link>
+                <Link to='#' className={`nav-link text-black ${style.dropdownLinkCat}`}>link 4</Link>
+
+              </li>              
+
+              </ul>
+              {/* end of drop down */}
+
             </li>
 
-            <li className={`nav-item ${style.navitems}`}>
-              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="product">Product</Link>
-            </li>
-
-            <li className={`nav-item ${style.navitems}`}>
+             <li className={`position-relative nav-item ${style.navitems}`}>
               <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="pages">Pages</Link>
+             
+             {/* dropdown */}
+             <ul className={`${style.dropdownList} pb-0`}>
+              <li className={`nav-item border-bottom ${style.navItemsDrop}`}>
+
+                <Link to='#' className={`nav-link text-black text-capitalize ${style.dropdownLink}`}>about us <span className={`ms-1 ${style.new}`}>New</span></Link>
+
+              </li>
+             
+              <li className={`nav-item border-bottom ${style.navItemsDrop}`}>
+
+                <Link to='#' className={`nav-link text-black text-capitalize ${style.dropdownLink}`}>contact us</Link>
+
+              </li>
+
+              <li className={`nav-item ${style.navItemsDrop}`}>
+
+                <Link to='#' className={`nav-link text-black text-capitalize ${style.dropdownLink}`}>FAQ's</Link>
+
+              </li>
+
+              </ul>
+              {/* end of drop down */}
+
             </li>
 
             <li className={`nav-item ${style.navitems}`}>
@@ -51,11 +147,37 @@ export default function Navbar() {
 
           </ul>
 
-          <div className="d-flex ms-auto " role="search">
+          <div className="d-flex ms-auto" role="search">
             <ul className={`navbar-nav gap-4 ${style.navIcons}`}>
-              <li><Link to=''><i className={`fa-solid fa-magnifying-glass text-white ${style.navlinks}`}></i></Link></li>
-              <li><Link to=''><i className={`fa-regular fa-circle-user text-white ${style.navlinks}`}></i></Link></li>
-              <li><Link to=''><i className={`fa-solid fa-bag-shopping text-white position-relative ${style.navlinks}`}><span>0</span></i></Link></li>
+              <li className={`nav-item ${style.navitems}`}><Link to=''><i className={`fa-solid fa-magnifying-glass text-white ${style.navlinks}`}></i></Link></li>
+              <li className={`position-relative ${style.navitems}`}>
+                <Link to=''><i className={`fa-regular fa-circle-user text-white ${style.navlinks}`}></i></Link>
+              
+             {/* dropdown */}
+             <ul className={`${style.dropdownList} pb-0`}>
+             <li className={`nav-item border-bottom me-2 ${style.navItemsDrop}`}>
+
+                <Link to='#' className={`nav-link text-black text-uppercase ${style.dropdownLink}`}>login</Link>
+
+              </li>
+             
+              <li className={`nav-item border-bottom ${style.navItemsDrop}`}>
+
+                <Link to='#' className={`nav-link text-black text-uppercase ${style.dropdownLink}`}>create account</Link>
+
+              </li>
+
+              <li className={`nav-item ${style.navItemsDrop}`}>
+
+                <Link to='#' className={`nav-link text-black text-uppercase ${style.dropdownLink}`}>wishlist</Link>
+
+              </li>
+            
+              </ul>              
+              {/* end of drop down */}
+              
+              </li>
+              <li className={`nav-item ${style.navitems}`}><Link to=''><i className={`fa-solid fa-bag-shopping text-white position-relative ${style.navlinks}`}><span>0</span></i></Link></li>
             </ul>
 
           </div>

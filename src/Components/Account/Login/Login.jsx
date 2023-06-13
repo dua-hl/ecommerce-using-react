@@ -5,7 +5,7 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup';
 import axios from 'axios';
 
-export default function Login() {
+export default function Login(props) {
     let schema = Yup.object({
         email: Yup.string().required("email is required").email("not valid") ,
         password:Yup.string().required("password is required"),
@@ -36,6 +36,7 @@ export default function Login() {
         if(data.message=='success'){
             localStorage.setItem("userToken",data.token);
             console.log('token is in local storage');
+            props.decodedData();
             navigate('/account/enterAccount');
         }
     }
@@ -62,7 +63,7 @@ export default function Login() {
         <input type="password" placeholder='password' name='password' value={formik.values.password} onChange={formik.handleChange}/>
         <p className='text-danger'>{formik.errors.password}</p>
 
-        <button type='submit' className='mb-2'>Sign in</button>
+        <button type='submit' className={`mb-2 ${style.loginbutton}`}>Sign in</button>
         </form>
 
         <div className={`text-end pt-2 pb-3 ${style.link}`}>

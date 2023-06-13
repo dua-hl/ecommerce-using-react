@@ -2,16 +2,21 @@
     width: 90% !important;
     padding-top: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;   
+    font-size: 13px; 
 }
 
 .navitems{
-    padding: 0 .8rem;
+    padding-bottom: .5rem;
+}
+
+.navIcons .dropdownList{
+    top:1.7rem;
 }
 
 .navIcons i{
     font-size:18px ;
 }
+
 .navIcons i span{
     position: absolute;
     bottom: 10px;
@@ -24,4 +29,43 @@
 .navlinks:hover{
 transition: .3s;
 opacity: .6; 
+}
+
+.dropdownList{
+    position: absolute !important;
+    top: 2.5rem;
+    background-color: white;
+    padding: .5rem !important;
+    width:max-content;
+    visibility: hidden;
+  }
+
+.dropdownLinkCat:hover{
+    color: #31a3a3 !important;
+    transition: .3s;
+    background-color:#31a3a311 ;
+}
+
+.navItemsDrop:hover{
+    background-color:rgba(128, 128, 128, 0.05) ;
+}
+
+.navItemsDrop:hover .dropdownLink{
+    transition: .3s;
+    transform: translateX(3px);
+}
+
+.navitems:hover .dropdownList{
+transition: .3s;
+visibility: visible;
+}
+
+.dropdownLink .new{
+color:white;
+background-color: #06b608;
+font-size: 11px;
+}
+
+ul{
+    list-style-type: none;
 }

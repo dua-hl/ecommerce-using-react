@@ -35,13 +35,13 @@ input::placeholder{
     color: #44444476;
 }
 
-button{
+.loginbutton{
     width:100%;
     text-transform: uppercase !important;
     border: none;
 }
 
-button:hover{
+.loginbutton:hover{
     width:100%;
     background-color: #31a3a3;
     transition: .3s;
