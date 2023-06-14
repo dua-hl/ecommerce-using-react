@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import style from './Navbar.module.css';
+import  logo from '../../images/logo.avif'
 
 export default function Navbar(props) {
   return (
@@ -9,8 +10,8 @@ export default function Navbar(props) {
     <div className={`container d-flex align-items-center fixed-top ${style.navbar}`}>
 
     <div className='navright col-3'>
-      <Link to="">
-      <img src='images/logo.avif' />
+      <Link to="/">
+      <img src={logo} />
       </Link>
     </div>
 
@@ -26,7 +27,7 @@ export default function Navbar(props) {
           <ul className="col-8 d-flex justify-content-center gap-5 navbar-nav mb-2 mb-lg-0">
 
             <li className={`nav-item ${style.navitems}`}>
-              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="" >Home</Link>
+              <Link className={`nav-link text-uppercase text-white ${style.navlinks}`} aria-current="page" to="/" >Home</Link>
             </li>
 
             <li className={`position-relative nav-item ${style.navitems}`}>
@@ -157,13 +158,13 @@ export default function Navbar(props) {
              <ul className={`${style.dropdownList} pb-0`}>
              <li className={`nav-item border-bottom me-2 ${style.navItemsDrop}`}>
 
-                <Link to='#' className={`nav-link text-black text-uppercase ${style.dropdownLink}`}>login</Link>
+                <Link to='/account/login' className={`nav-link text-black text-uppercase ${style.dropdownLink}`}>login</Link>
 
               </li>
              
               <li className={`nav-item border-bottom ${style.navItemsDrop}`}>
 
-                <Link to='#' className={`nav-link text-black text-uppercase ${style.dropdownLink}`}>create account</Link>
+                <Link to='/account/register' className={`nav-link text-black text-uppercase ${style.dropdownLink}`}>create account</Link>
 
               </li>
 

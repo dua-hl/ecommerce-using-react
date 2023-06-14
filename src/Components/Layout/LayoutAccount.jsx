@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../../Navbar/Navbar'
-import Foot from '../../Footer/Foot'
 import { Outlet } from 'react-router'
 import { useNavigate } from 'react-router-dom'
+import Navbar from '../Navbar/Navbar';
+import Foot from '../Footer/Foot';
 
 export default function LayoutAccount({user,setUserData}) {
   let navigate = useNavigate();
@@ -15,6 +15,7 @@ export default function LayoutAccount({user,setUserData}) {
 
   return (
     <div>
+
         <Navbar user={user} logOut={logout}/>
 
         <div className='container'>
@@ -22,6 +23,7 @@ export default function LayoutAccount({user,setUserData}) {
         </div>
 
         <Foot />
+
     </div>
   )
 }
