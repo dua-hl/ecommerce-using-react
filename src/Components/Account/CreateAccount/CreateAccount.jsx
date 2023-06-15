@@ -11,9 +11,9 @@ export default function CreateAccount() {
   let navigate=useNavigate();
 
   const schema = Yup.object({
-     email: Yup.string().required("email is required").email("not valid") ,
-     userName:Yup.string().required("name is required").min(3,"minimum 3 letters").max(10,"maximum 10 letters") ,
-      password:Yup.string().required("password is required").min(5,"minimum 5 letters"),
+     email: Yup.string().required("email is required").email("email is not correct").matches(/^[^/,'>]+${}-/, 'Characters are not allowed') ,
+     userName:Yup.string().required("name is required").min(3,"minimum 3 letters").max(10,"maximum 10 letters").matches(/^[^/,'>]+${}-/, 'Characters are not allowed') ,
+      password:Yup.string().required("password is required").min(5,"minimum 5 letters").matches(/^(?=.*[A-Z])(?!.*[\W_]).*$/, 'Password must contain at least one uppercase letter and no special characters'),
       cPassword: Yup.string().required("confirm your password").oneOf([Yup.ref('password')],"not matching passwords"),
     })
 
@@ -34,6 +34,9 @@ export default function CreateAccount() {
     try{
       let {data} = await axios.post("https://king-prawn-app-3mgea.ondigitalocean.app/auth/signup",values)
       console.log(data)
+
+      navigate('/account/login')
+      setErrorStatus('');
     }
     catch (error) {
       const errorMessage =error.response.data.message;
@@ -41,8 +44,6 @@ export default function CreateAccount() {
       console.log(errorMessage);
     };
     
-
-   
   }
 
   return (

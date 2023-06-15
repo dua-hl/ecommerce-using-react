@@ -9,6 +9,7 @@ import jwt from 'jwt-decode';
 import { useEffect, useState } from 'react';
 import Shopping from './Components/Shopping/Shopping';
 import LayoutAccount from './Components/Layout/LayoutAccount';
+import ProtectedRouter from './Components/Account/ProtectedRouter/ProtectedRouter';
 
 
 function App() {
@@ -17,8 +18,8 @@ let [userData,setUserData] = useState(null)
 
 function decodingData(){
   let token = localStorage.getItem('userToken');
-  let decoded = jwt(token);
-  setUserData(decoded)
+  let decodedToken = jwt(token);
+  setUserData(decodedToken)
 }
 
 useEffect( ()=>{
@@ -34,10 +35,10 @@ const router = createBrowserRouter([
     {path:'shopping' , element:<Shopping />},
   ]},
 
-  {path:'account', element:<LayoutAccount user={userData,setUserData}/> ,children:[
+  {path:'account', element:<LayoutAccount userData={userData} setUserData={setUserData} /> ,children:[
     {path:'register', element:<CreateAccount />},
-    {path:'login', element:<Login decodedData={decodingData} />},
-    {path:'enterAccount', element:<EnterAccount />},
+    {path:'login', element:<Login decodedData={decodingData} user={userData} />},
+    {path:'enteraccount', element:<ProtectedRouter> <EnterAccount /> </ProtectedRouter>},
 
   ]},
 

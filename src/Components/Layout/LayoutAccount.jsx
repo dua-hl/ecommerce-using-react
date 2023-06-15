@@ -4,19 +4,13 @@ import { useNavigate } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar';
 import Foot from '../Footer/Foot';
 
-export default function LayoutAccount({user,setUserData}) {
+export default function LayoutAccount(props) {
   let navigate = useNavigate();
-
-  function logout(){
-    localStorage.removeItem('userToken')
-    setUserData(null)
-    navigate('/account/login')
-  }
 
   return (
     <div>
 
-        <Navbar user={user} logOut={logout}/>
+        <Navbar userData={props.userData} setUserData={props.setUserData}/>
 
         <div className='container'>
         <Outlet></Outlet>

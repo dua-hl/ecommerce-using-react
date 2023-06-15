@@ -47,4 +47,19 @@ input::placeholder{
     transition: .3s;
 }
 
+.frontError{
+    color: rgba(255, 0, 0, 0.604);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.backError{
+    border: 2px solid rgba(255, 0, 0, 0.61);
+    background-color:rgba(255, 0, 0, 0.089);
+
+    padding: .45rem .8rem;
+    color: rgba(255, 0, 0, 0.604);
+    text-align: center;
+    letter-spacing: .5px;
+}
 

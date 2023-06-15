@@ -7,8 +7,8 @@ import axios from 'axios';
 
 export default function Login(props) {
     let schema = Yup.object({
-        email: Yup.string().required("email is required").email("not valid") ,
-        password:Yup.string().required("password is required"),
+        email: Yup.string().required("email is required").email(`email is not correct`).matches(/^[^/,'>]+${}-/, 'Characters are not allowed') ,
+        password:Yup.string().required("password is required").min(3,"minimum 5 letters").matches(/^(?=.*[A-Z])(?!.*[\W_]).*$/, 'Password must contain at least one uppercase letter and no special characters'),
     })
 
     let [errorStatus, setErrorStatus]=useState('')
@@ -26,19 +26,18 @@ export default function Login(props) {
 
     async function checkDataAuthuntication(values){
         
-        let {data} = await axios.post('https://lazy-blue-sockeye-gear.cyclic.app/api/v1/auth/signin',values)
-        .catch((err)=>{
-            setErrorStatus(err.response)
-            console.log('errorStatus')
-            console.log(errorStatus);
-        })
-
-        if(data.message=='success'){
-            localStorage.setItem("userToken",data.token);
-            console.log('token is in local storage');
-            props.decodedData();
-            navigate('/account/enterAccount');
+        try{
+            let {data} = await axios.post('https://king-prawn-app-3mgea.ondigitalocean.app/auth/login',values);
+            localStorage.setItem('userToken', data.access_token);
+            setErrorStatus('');
+            navigate('/account/enteraccount');
         }
+        catch(error){
+            const errorMessage = error.response.data.message;
+            setErrorStatus(errorMessage)
+            console.log(errorStatus);
+        }
+
     }
 
 
@@ -58,12 +57,27 @@ export default function Login(props) {
 
         <form onSubmit={formik.handleSubmit}>
         <input type="email"  placeholder='email' name='email' value={formik.values.email} onChange={formik.handleChange}/>
-        <p className='text-danger'>{formik.errors.email}</p>
+        {formik.touched.email && formik.errors.email ?
+        (<p className={`fw-bold mt-3 ${style.frontError}`}>{formik.errors.email}</p>)
+        :null  
+        }
 
         <input type="password" placeholder='password' name='password' value={formik.values.password} onChange={formik.handleChange}/>
-        <p className='text-danger'>{formik.errors.password}</p>
+        {formik.touched.password && formik.errors.password ?
+        (<p className={`fw-bold mt-3 ${style.frontError}`}>{formik.errors.password}</p>)
+        :null  
+        }
 
-        <button type='submit' className={`mb-2 ${style.loginbutton}`}>Sign in</button>
+        { errorStatus ?
+        (<p className={`fw-bold mt-2 mb-2 ${style.backError}`}><span className='text-uppercase'>sorry!</span> {errorStatus}.</p>)
+        :null  
+        }
+        { errorStatus=='Not register account' ?
+        <Link to='/account/register' className={`text-dark fw-bold ${style.Link}`}>Create account?</Link>
+        : null
+        }
+
+        <button type='submit' className={`mb-2 mt-1 ${style.loginbutton}`}>Sign in</button>
         </form>
 
         <div className={`text-end pt-2 pb-3 ${style.link}`}>
