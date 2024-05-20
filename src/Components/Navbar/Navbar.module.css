@@ -1,16 +1,29 @@
 .navbar{
-    width: 90% !important;
-    padding-top: 1.2rem;
+    padding: .7rem 3rem .2rem 3.8rem;
     font-family: 'Poppins', sans-serif;
-    font-size: 13px; 
+    font-size: 13px;
+    z-index: 3;
+    /* background-color:darkkhaki; */
+}
+
+.scrollMore50{
+    background-color: white;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.374);
+    position: fixed !important;
+    top:0;
+}
+
+.scrollMore50 .navlinks{
+    color: black !important;
+}
+.scrollMore50 .navlinks span{
+    color: rgb(255, 255, 255) !important;
 }
 
 .navitems{
-    padding-bottom: .5rem;
 }
 
 .navIcons .dropdownList{
-    top:1.7rem;
 }
 
 .navIcons i{
@@ -20,30 +33,84 @@
 .navIcons i span{
     position: absolute;
     bottom: 10px;
-    font-size: 9px !important;
+    font-size: 11px !important;
     background-color: black;
     border-radius: 50%;
-    padding: 4px 5px;
+    padding: 3px 4px;
 }
 
 .navlinks{
+    /* color: rgb(255, 255, 255) !important; */
+    cursor: pointer;
+}
+
+.NavIsInHome{
+    color: white !important;
+}
+
+.NavIsInHome:hover{
+    transition: .3s;
+    opacity: .6; 
+}
+.inHome{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: .7rem 7.3rem .2rem;
+}
+    
+.NavIsInSite{
     color: black !important;
+    font-weight: 900 !important;
+    letter-spacing: .06rem;
 }
 
-.navlinks:hover{
-transition: .3s;
-opacity: .6; 
+.NavIsInSite span{
+    color: white !important;
+}
+.NavIsInSite:hover{
+    transition: .3s;
+    opacity: .6; 
+    color: #329b9b !important;
 }
 
-.dropdownList{
+.dropdownListClick{
     position: absolute !important;
-    top: 2.5rem;
     background-color: white;
     padding: .5rem !important;
     width:max-content;
+    left: 50%;
+    transform: translateX(-50%);
     visibility: hidden;
     border: 1px solid rgba(0, 0, 0, 0.122);
-  }
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .7s, visibility .5s;
+}
+
+
+.dropdownList{
+    position: absolute !important;
+    background-color: white;
+    padding: .5rem !important;
+    width:max-content;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid rgba(0, 0, 0, 0.122);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+}
+    
+.dropdownList h4{
+    cursor: auto;
+}
+
+.navitems:hover .dropdownList{
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .dropdownLinkCat:hover{
     color: #31a3a3 !important;
@@ -66,11 +133,6 @@ opacity: .6;
 .navItemsDrop:hover .dropdownLink{
     transition: .3s;
     transform: translateX(3px);
-}
-
-.navitems:hover .dropdownList{
-transition: .3s;
-visibility: visible;
 }
 
 .dropdownLink .new{

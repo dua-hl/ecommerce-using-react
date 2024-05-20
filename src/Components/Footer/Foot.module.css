@@ -1,3 +1,19 @@
+.YesPreFooter{
+    visibility: visible !important;
+}
+.NoPrefooter{
+    height: 0 !important;
+}
+
+.FootIsInSite{
+    background-color: black !important;
+    color:white;
+}
+
+.FootIsInSite p{
+    color:white;
+}
+
 .footer{
     background-color: #f9f9f9;
     font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
@@ -17,6 +33,12 @@
 .navlinks:hover{
     text-decoration: underline;  
     color: rgba(0, 0, 0, 0.57) !important; 
+    transition: .3s;   
+}
+
+.FootIsInSite .navlinks:hover{
+    text-decoration: underline;  
+    color: rgba(255, 255, 255, 0.8) !important; 
     transition: .3s;   
 }
 

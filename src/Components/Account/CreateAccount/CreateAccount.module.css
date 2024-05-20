@@ -5,12 +5,12 @@
 .regist{
     font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
     font-size: 13px;
-    width: 38%;
+    width: 33%;
 }
 
 .regist h2{
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     color: #444;
     font-family: Roboto Slab,serif;
 }
@@ -42,7 +42,14 @@ p{
 button{
     background-color: black;
     color: white;
-    padding: .4rem ;
+    padding: .5rem ;
+    border: none;
+}
+
+button:hover{
+    background-color: #31a3a3;
+    border: none;
+    transition: .3s;
 }
 
 .frontError{

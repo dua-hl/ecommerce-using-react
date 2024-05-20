@@ -1,12 +1,21 @@
 import React from 'react'
 import style from './Foot.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import PreFooter from './Prefooter/PreFooter'
 
 export default function Foot() {
-  return (
+
+    let location = useLocation().pathname === "/" ? style.FootIsInHome : style.FootIsInSite; //this made to add modify navbar props. in home and other pages, except position properiteis because position should be modified on the containes div.
+    let preFooter = useLocation().pathname === "/" ? style.NoPrefooter : style.YesPreFooter; //this made to add modify navbar props. in home and other pages, except position properiteis because position should be modified on the containes div.
+
+    return (
     <div>
 
-    <div className={`${style.footer}`}>
+    <div className={`${preFooter} invisible`}>
+    <PreFooter />
+    </div>
+
+    <div className={`${style.footer} ${location}`}>
     <div className='container pt-5 '>
 
         <div className='d-flex'>

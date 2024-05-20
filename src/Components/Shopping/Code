@@ -1,0 +1,18 @@
+//in product list we need color value:
+function getColorCode(data){
+
+  //colors in value array from data
+  let colorList = data.facets[14].values;
+
+  //get color code only from value array
+  let allCodes = colorList.map((value) => value.code);
+
+  //split code and save the code only without color number => splitting result will be an array with two part, we will take the second part related to code:
+  let splittedCode = allCodes.map((code) => (code.split('_').filter(segment => segment !== ''))[1])
+
+//these arrays contains color name and color code, and they will be sent to shopping side for 
+  setColorCode(splittedCode);
+
+  // console.log(splittedCode);
+  
+}

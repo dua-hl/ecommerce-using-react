@@ -1,0 +1,10 @@
+.catList{
+    background-color: #f9f9f9;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.catItem{
+font-family: 'Poppins', sans-serif;
+font-size: 13px;
+}

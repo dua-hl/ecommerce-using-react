@@ -1,0 +1,21 @@
+.pathDetails{
+    padding: .7rem 6.9rem .2rem;
+    background: #f9f9f9;
+    width: 100%;
+    height: fit-content;
+    margin-top: 1rem;
+
+}
+
+.pathDetails h4{
+    color: #444;
+    font-size: .75rem !important;
+    font-weight: 300 !important;
+    font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
+}
+
+.pathDetails h4:hover{
+    transition: .3s;
+    opacity: 1;
+    color: #0aa4a4 !important;
+}

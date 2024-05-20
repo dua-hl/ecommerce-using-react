@@ -1,0 +1,29 @@
+.shopping{
+    margin-top: 50px;
+}
+.shoppingDetail{
+    margin: 0 7.5rem;
+}
+
+.shoppingMiddle{
+}
+
+.photo h3{
+    font-family: Roboto Slab,serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.catImg{
+    width: 100%;
+    height: max-content;
+    margin-top: 0 !important;
+}
+
+.shoppingSide{
+    width: 21.5%;
+}
+
+.shoppingMiddle{
+    width: 78.5%;
+}

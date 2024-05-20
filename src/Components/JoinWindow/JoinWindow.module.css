@@ -1,0 +1,62 @@
+.joinWindowAll{
+    z-index: 5;
+    position: absolute;
+    height:100vh;
+    width: 100%;
+    background:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55));
+    font-family: 'Poppins', sans-serif;
+    visibility: hidden;
+}
+
+.joinWindow{
+    background-color: #fafafa;
+}
+
+.joinWindowDesc h2{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.joinWindowDesc p{
+    font-size: 13px;
+    max-width: 400px;
+    line-height: 1.3;
+}
+
+.joinWindowDesc input::placeholder{
+font-size: .85rem;
+}
+
+.joinWindowDesc input:focus{
+    outline: none;
+}
+
+.joinWindowDesc button{
+    padding: .55rem;
+    font-size: 13px !important;
+}
+
+.joinWindowDesc li:hover{
+opacity: .7;
+transition: opacity .5s;
+}
+
+.joinWindowDesc input[type="checkbox"]{
+    width: 12px;
+    height: 12px;
+    margin-bottom: 10.5% !important;
+}
+
+.joinWindowDesc p span{
+    font-size: 11px !important;
+}
+
+.closeBtn{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.closeBtn:hover{
+    color: black;
+}

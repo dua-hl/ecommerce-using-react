@@ -1,0 +1,35 @@
+.pageNotFound{
+    height:82vh;
+    text-align: center;
+    vertical-align:middle;
+    font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
+}
+
+.pageNotFound h2{
+    font-family: Roboto Slab,serif;
+    font-size: 30px;
+    font-weight:500;
+    color: #444;
+}
+
+.pageNotFound p{
+    font-size: 14px;
+    font-weight:400;
+    color: #444;
+}
+
+.pageNotFound .button{
+    text-transform: uppercase !important;
+    border: none;
+    font-size: 13px;
+    background-color: black;
+    color: white !important;
+    width: fit-content !important;
+    padding:.5rem 1.8rem ;
+    border-radius: 0;
+}
+
+.pageNotFound .button:hover{
+    background-color: #31a3a3;
+    transition: .3s;
+}

@@ -2,12 +2,19 @@
     height: 100vh;
     font-family: Poppins,Arial,Tahoma,Verdana,sans-serif;
     font-size: 13px;
+    max-width: 900px;
+    margin: auto;
 }
 
 .login h2{
     font-family: Roboto Slab,serif;
     font-size: 20px;
-    font-weight:400;
+    font-weight:700;
+    color: #444;
+}
+
+.box{
+    background-color: white;
 }
 
 .login h3{

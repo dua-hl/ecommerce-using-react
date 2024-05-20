@@ -1,0 +1,58 @@
+.navDetailsAll{
+    background-color: black;
+}
+
+.navDetails{
+    padding: .7rem 3.2rem .1rem .9rem; 
+}
+
+.navitem{
+padding: 0rem .9rem;
+}
+
+.navDetailsRight .navitem{
+    padding: 0rem .55rem;
+    line-height: 1rem;
+    letter-spacing: .015rem;
+    font-weight: 500;
+}
+
+.navitem h4{
+    color:white !important;
+    cursor: pointer;
+    font-size: 12px !important;
+}
+
+.navitem .navLink{
+    text-decoration: none;
+    color:white !important;
+    font-size: 12px !important;
+}
+
+.dropDownList{
+    position: absolute !important;
+    border: 1px solid rgba(0, 0, 0, 0.122);
+    background-color:black;
+    width: 100%;
+    left: 0;
+    top: 35px ;
+padding: .3rem .5rem;
+visibility: hidden;
+}
+
+.dropItem{
+    padding: .1rem .5rem;
+}
+
+.dropItem .navlink{
+    color:white !important;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.navitem:hover .dropDownList{
+    visibility: visible;
+    transition: .3s;
+}
+
+
